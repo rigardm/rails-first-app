@@ -1,4 +1,4 @@
 class Room < ApplicationRecord
-  has_many :bookings, dependant: :destroy
+  has_many :bookings, dependent: :destroy
   belongs_to :hotel
 end
