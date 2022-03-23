@@ -1,0 +1,8 @@
+<div class="container">
+  <h2><%= @hotel.name %></h2>
+  <p>Located at: <%= @hotel.address %>,<%= @hotel.city %>, <%= @hotel.country %> </p>
+
+  <% @hotels_rooms.each do |room| %>
+    <li><%= room.number %></li>
+  <% end %>
+</div>

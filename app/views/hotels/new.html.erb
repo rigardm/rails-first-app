@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for(@hotel) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :country, as: :string %>
+    <%= f.submit %>
+  <% end %>
+</div>
