@@ -12,35 +12,13 @@ Room.destroy_all
 
 puts "Creating the hotel..."
 plazza = { name: "Plazza", address: "7 boulevard du printemps", city: "Paris", country: "France" }
-# hilton = { name: "Hilton", address: "villa Gaudelet", city: "Paris", country: "France" }
-# zeina = { name: "Zeina ", address: "42 avenue de la République", city: "Paris", country: "France" }
+hilton = { name: "Hilton", address: "villa Gaudelet", city: "Paris", country: "France" }
+zeina = { name: "Zeina ", address: "42 avenue de la République", city: "Paris", country: "France" }
 
 
-plazza.each do |attributes|
+[plazza, hilton, zeina].each do |attributes|
 hotel = Hotel.create!(attributes)
 puts "Created #{hotel.name}"
 end
-
-puts "Creating rooms at Plazza ..."
-
-Room.create!(
-  hotel: hotel.id,
-  number: 1,
-  capacity: 4,
-  daily_price: 120)
-
-Room.create!(
-  hotel: hotel.id,
-  number: 2,
-  capacity: 4,
-  daily_price: 120)
-
-Room.create!(
-  hotel: hotel.id,
-  number: 3,
-  capacity: 2,
-  daily_price: 70)
-
-puts "created #{Room.count} #{'room'.pluralize(Room.count)}"
 
 puts "Finished!"
