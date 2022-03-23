@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'hotels#show'
 
   resources :hotels do
-    resources :rooms, only: [:index]
+    resources :rooms
   end
 end
