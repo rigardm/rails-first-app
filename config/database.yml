@@ -52,3 +52,12 @@ test:
   username: marion
   password:
   timeout: 5000
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: rails-first-app_test
+  pool: 5
+  username: marion
+  password:
+  timeout: 5000
